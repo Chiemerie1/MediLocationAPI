@@ -3,21 +3,21 @@ from .models import State, LocalGovenment, Hospital
 
 
 
-class HospitalSerialzer(serializers.ModelSerializers):
+class HospitalSerialzer(serializers.ModelSerializer):
     class Meta:
         model = Hospital
         fields = "__all__"
 
 
 
-class LocalSerialzer(serializers.ModelSerializers):
+class LocalSerialzer(serializers.ModelSerializer):
     class Meta:
         model = LocalGovenment
         fields = "__all__"
 
 
 
-class StateSerialzer(serializers.ModelSerializers):
+class StateSerialzer(serializers.ModelSerializer):
     class Meta:
         model = State
         fields = "__all__"
