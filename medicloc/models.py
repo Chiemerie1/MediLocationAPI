@@ -1,7 +1,14 @@
-from pyexpat import model
 from django.db import models
 
 # Create your models here.
+
+class Country(models.Model):
+    name = models.CharField(max_length=30)
+    capital = models.CharField(max_length=30)
+    abbr = models.CharField(max_length=3)
+
+    def __str__(self):
+        return self.name + "" + self.abbr
 
 
 class State(models.Model):
